@@ -147,7 +147,6 @@
     <ClInclude Include="TestingClass.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\ECS\ComponentArray.cpp" />
     <ClCompile Include="Source\ECS\EntityManager.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="TestingClass.cpp" />

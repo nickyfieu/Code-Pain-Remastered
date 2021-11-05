@@ -36,16 +36,16 @@ public:
 private:
     // Packs all the components as closely together in memory as possible
     // At most this array can be filled with MaxEntities amount of components of a single type
-    T Components[MaxEntities];
+    T Components[MaxEntities]{};
 
     // Unordered map from an entity index to the component array index.
-    std::unordered_map<Entity, unsigned int> EntityToComponentIndex;
+    std::unordered_map<Entity, unsigned int> EntityToComponentIndex{};
 
     // Unordered map from an component array index to the entity index.
-    std::unordered_map<unsigned int, Entity> ComponentToEntityIndex;
+    std::unordered_map<unsigned int, Entity> ComponentToEntityIndex{};
 
     // Total size of valid components in the array currently.
-    unsigned int AmountOfComponents;
+    unsigned int AmountOfComponents = 0;
 };
 
 template<typename T>

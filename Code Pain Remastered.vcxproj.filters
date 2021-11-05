@@ -41,8 +41,5 @@
     <ClCompile Include="Source\ECS\EntityManager.cpp">
       <Filter>Source\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ECS\ComponentArray.cpp">
-      <Filter>Source\ECS</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
