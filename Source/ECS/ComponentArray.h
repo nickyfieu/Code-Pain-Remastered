@@ -12,8 +12,15 @@
  * We use a unordered map cause it allows us to use find(), delete() & insert()
  */
 
+// We require an interface so that we can easily call EntityRemoved on all the component arrays
+class IComponentArray abstract
+{
+public:
+    virtual void EntityRemoved(Entity EntityIndex) = 0;
+};
+
 template<typename T>
-class ComponentArray final
+class ComponentArray final : public IComponentArray
 {
 public:
     // Adds the given component to the entity, do not add a component twice
@@ -24,10 +31,10 @@ public:
 
     // Supposed to be called when the given entity is removed
     // Removes the component for the given entity if it exists
-    void EntityRemoved(Entity EntityIndex);
+    virtual void EntityRemoved(Entity EntityIndex) override;
 
     // Returns the component for the given entity
-    T& GetComponent(Entity EntityIndex) const;
+    T& GetComponent(Entity EntityIndex);
 
 #ifdef _DEBUG
     void DebugPrint() const;
@@ -93,7 +100,7 @@ void ComponentArray<T>::EntityRemoved(Entity EntityIndex)
 }
 
 template<typename T>
-T& ComponentArray<T>::GetComponent(Entity EntityIndex) const
+T& ComponentArray<T>::GetComponent(Entity EntityIndex)
 {
     // TODO: Error when we cannot find Entity in EntityToComponentIndex map
 

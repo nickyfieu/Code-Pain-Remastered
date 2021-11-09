@@ -6,7 +6,7 @@ int main()
 {
 
     TestingClass Testing{};
-    Testing.Test();
+    Testing.TestECS();
 
     return 0;
 }

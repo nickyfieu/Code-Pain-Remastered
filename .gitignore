@@ -6,7 +6,6 @@
 *.lo
 *.o
 *.obj
-*.vs
 
 # Precompiled Headers
 *.gch
@@ -31,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+.vs/
+x86/
+x64/
+[Ww][Ii][Nn]32/
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/

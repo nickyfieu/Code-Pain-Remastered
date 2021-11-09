@@ -30,6 +30,9 @@
     <ClInclude Include="Source\ECS\ComponentArray.h">
       <Filter>Source\ECS</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ECS\ComponentManager.h">
+      <Filter>Source\ECS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp">
@@ -39,6 +42,9 @@
       <Filter>Source\TestingClass</Filter>
     </ClCompile>
     <ClCompile Include="Source\ECS\EntityManager.cpp">
+      <Filter>Source\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ECS\ComponentManager.cpp">
       <Filter>Source\ECS</Filter>
     </ClCompile>
   </ItemGroup>

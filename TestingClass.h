@@ -4,6 +4,6 @@ class TestingClass
 public:
     TestingClass();
 
-    void Test();
+    void TestECS();
 };
 
